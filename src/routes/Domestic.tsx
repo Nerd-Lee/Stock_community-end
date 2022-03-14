@@ -1,8 +1,16 @@
+import styled from "styled-components";
+
+// styled-components
+const Container = styled.div`
+  margin: 20px 20px;
+`;
+
+const MenuItemList = styled.ul``;
+
 export function Domestic() {
-  console.log("Domestic");
   return (
-    <>
-      <div>domestic</div>
-    </>
+    <Container>
+      <MenuItemList></MenuItemList>
+    </Container>
   );
 }
