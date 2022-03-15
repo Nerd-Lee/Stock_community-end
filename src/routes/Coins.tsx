@@ -36,6 +36,18 @@ const CoinsList = styled.ul`
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
+
+  @media screen and (max-width: 1200px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media ${(props) => props.theme.tablet} {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media ${(props) => props.theme.mobile} {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const Coin = styled.li`

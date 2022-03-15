@@ -38,6 +38,12 @@ const TopicCard = styled.div`
   align-items: center;
   -webkit-box-pack: justify;
   justify-content: space-between;
+
+  @media ${(props) => props.theme.tablet} {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const TopicCardText = styled.div`
@@ -48,14 +54,18 @@ const TopicCardText = styled.div`
   color: #fff;
   font-size: 1.625rem;
   font-weight: 400;
-  width: 65%;
-  height: 100%;
+  width: 100%;
+  height: 50%;
   -webkit-box-flex: 0;
   flex: 0 1 auto;
   padding: 0 3rem 0 0;
   z-index: 3;
   margin: -5% 0;
   white-space: pre-line;
+
+  @media ${(props) => props.theme.tablet} {
+    padding: 3rem 0 3rem 0;
+  }
 `;
 
 const BigTopicTitle = styled.h1`
@@ -69,6 +79,11 @@ const BigTopicTitle = styled.h1`
   font-weight: 600;
   margin-bottom: 0.5rem;
   line-height: normal;
+
+  @media ${(props) => props.theme.tablet} {
+    font-size: 1.5rem;
+    text-align: center;
+  }
 `;
 
 const SmallTopicTitle = styled.h2`
@@ -81,6 +96,11 @@ const SmallTopicTitle = styled.h2`
   margin: 0.75em 0 0.25em;
   font-size: 1.5rem;
   font-weight: 400;
+
+  @media ${(props) => props.theme.tablet} {
+    font-size: 1rem;
+    text-align: center;
+  }
 `;
 
 const TopicImgContainer = styled.div`
@@ -90,12 +110,16 @@ const TopicImgContainer = styled.div`
   -webkit-font-smoothing: antialiased;
   word-break: keep-all;
   color: rgb(255, 255, 255);
-  width: 35%;
-  height: 100%;
+  width: 50%;
+  height: 50%;
   display: flex;
   -webkit-box-flex: 0;
   flex: 0 1 auto;
   box-sizing: border-box;
+
+  @media ${(props) => props.theme.tablet} {
+    justify-content: center;
+  }
 `;
 
 const TopiccImg = styled.img`

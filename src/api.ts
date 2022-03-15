@@ -1,3 +1,5 @@
+import axios from "axios";
+
 const BASE_COIN_URL = process.env.REACT_APP_COIN_API_URL;
 
 export function fetchCoins() {
@@ -27,5 +29,15 @@ export function fetchCoinTicker(coinId: string) {
     })
     .catch((err) => {
       console.error("coin info error : ", err);
+    });
+}
+
+export function fetchMostOverseas() {
+  return fetch("http://localhost:8080/most_overseas")
+    .then((res) => {
+      return res.json();
+    })
+    .catch((err) => {
+      console.error("most overseas error : ", err);
     });
 }

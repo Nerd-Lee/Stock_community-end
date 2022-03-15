@@ -8,5 +8,8 @@ declare module "styled-components" {
     bgColor: string;
     accentColor: string;
     activeColor: string;
+    mobile: string;
+    tablet: string;
+    laptop: string;
   }
 }
